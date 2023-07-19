@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            
+            function give_number() {
+                var n1 = eval(prompt("number 1"))
+                var n2 = eval(prompt("number 2"))
+                var op = prompt("op")
+                var result = calc(n1,n2,op)
+                alert(result)
+                
+            }
+
+            function calc(num1,num2,opperation) {
+                switch(opperation){
+                    case "+" : return(num1+num2);
+                    case "-" : return(num1-num2);
+                    case "*" : return(num1*num2);
+                    case "/" : return(num1/num2);
+                }
+                
+            }
+
+            give_number()
+
+
+        </script>
+    </head >
+    <body onload = "give_number()">
+        
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id = "result"> show time</h2>
+    <button onclick="showTimw()">click to show in show time</button>
+    <br>
+    <button onclick="this.innerHTML = Date()">click to show in me</button>
+    <br>
+    <input type="text" onchange="changeInput(this.value)">
+</body>
+<script>
+    function showTimw(){
+        document.getElementById("result").innerHTML = Date();
+
+    };
+    function changeInput(value){
+        document.getElementById("result").innerHTML = value;
+
+    };
+</script>
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>pleas input a number beetwin 1and 10</p>
+    <input type="text" id="input">
+    <button type="button"  onclick="test1()">test the number</button>
+    <p id="p01"></p>
+
+</body>
+<script>
+    function test1(){
+        var message,n;
+        message = document.getElementById("p01");
+        message.innerHTML = "";
+        x = document.getElementById("input").value;
+
+        try{
+            if(x=="") throw "empty";
+            if(isNaN(x)) throw "not a number";
+            
+            x = Number(x);
+
+            if(x<5) throw "its too low";
+            if(x>10) throw "its too large";
+        }
+        catch (erors){
+            message.innerHTML = "your input is " + erors;
+        }
+
+    }
+
+</script>
+
+</html>

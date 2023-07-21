@@ -18,16 +18,16 @@
         var message,n;
         message = document.getElementById("p01");
         message.innerHTML = "";
-        x = document.getElementById("input").value;
+        n = document.getElementById("input").value;
 
         try{
-            if(x=="") throw "empty";
-            if(isNaN(x)) throw "not a number";
+            if(n=="") throw "empty";
+            if(isNaN(n)) throw "not a number";
             
-            x = Number(x);
+            n = Number(n);
 
-            if(x<5) throw "its too low";
-            if(x>10) throw "its too large";
+            if(n<5) throw "its too low";
+            if(n>10) throw "its too large";
         }
         catch (erors){
             message.innerHTML = "your input is " + erors;

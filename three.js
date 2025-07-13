@@ -1,10 +1,9 @@
 const addButton = document.getElementById('add-item');
 const itemList = document.getElementById('item-list');
 
-// شمارنده آیتم‌ها
+
 let itemCount = itemList.children.length;
 
-// افزودن آیتم جدید
 addButton.addEventListener('click', () => {
   itemCount++;
   
@@ -14,7 +13,6 @@ addButton.addEventListener('click', () => {
   itemList.appendChild(li);
 });
 
-// حذف آیتم با Event Delegation
 itemList.addEventListener('click', (event) => {
   if (event.target.classList.contains('delete-btn')) {
     const li = event.target.closest('li');
